@@ -11,7 +11,7 @@ app.use(express.json())
 app.post("/sign-up", (req,res) =>{
     const signInData = req.body;
     user.push(signInData);
-    res.send("OK")
+    res.status(201).json("OK")
 })
 
 app.post("/tweets", (req,res)=>{
@@ -23,7 +23,7 @@ app.post("/tweets", (req,res)=>{
         res.send("User not found")
         return 
     }
-    res.send("OK")
+    res.status(201).json("OK")
 })
 
 app.get("/tweets", (req,res)=>{
