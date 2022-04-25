@@ -26,9 +26,6 @@ app.post("/tweets", (req,res)=>{
     res.send("OK")
 })
 
-app.get("/tweets", (req,res)=>{
-    res.send(tweets.slice(-10));
-})
 
 app.listen(5000, ()=>{
     console.log("Server is running on: http://localhost:5000")
